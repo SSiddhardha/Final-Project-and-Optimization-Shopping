@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saini's Essentials</title>
+  <link rel="stylesheet" href="SE.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1 class="logo" >Saini's Essentials</h1>
+    <div class="header-right">
+      <div class="auth-buttons">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+      </div>
+
+      <div class="profile-menu-container" style="display: none;">
+        <div class="profile-icon-wrapper">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/user-male-circle.png" class="profile-icon" />
+          <span class="profile-name"></span>
+        </div>
+        <div class="dropdown-menu">
+          <li id="profile-option">Profile</li>
+          <li id="orders-option">Orders</li>
+          <li id="logout-btn">Logout</li>
+
+        </div>
+      </div>
+
+      
+      <img id="cart-icon" src="https://img.icons8.com/ios-filled/24/ffffff/shopping-cart.png" alt="cart" />
+    </div>
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search for products, categories..." />
+    <button id="search-button">🔍</button>
+  </div>
+
+  <section class="hero">
+    <h2>Everyday Essentials, Elevated</h2>
+    <p>Discover top-quality lifestyle essentials curated for modern needs. Stylish, functional, and always reliable.</p>
+    <button id="shopNowBtn" class="shop-now-btn">Shop Now</button>
+  </section>
+
+  <section class="categories">
+    <div class="category-card" onclick="showProducts('books')">📚 Books</div>
+    <div class="category-card" onclick="showProducts('clothes')">👗 Clothes</div>
+    <div class="category-card" onclick="showProducts('electronics')">💻 Electronics</div>
+    <div class="category-card" onclick="showProducts('groceries')"> 🧺 Groceries</div>
+    <div class="category-card" onclick="showProducts('kitchen')">🍳 Kitchen & Home</div>
+    <div class="category-card" onclick="showProducts('beauty')">💄 Beauty & Health</div>
+  </section>
+
+  <section class="products" id="products-section">
+    
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Saini's Essentials. All rights reserved.</p>
+  </footer>
+
+  
+  <div id="cart-overlay"></div>
+  <div id="cart-panel">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart">✖</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <p>Total: ₹<span id="cart-total">0.00</span></p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+
+
+  <script src="SE.js"></script>
+</body>
+
+</html>
